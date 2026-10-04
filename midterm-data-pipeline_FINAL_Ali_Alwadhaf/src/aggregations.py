@@ -1,8 +1,8 @@
-from pymongo import MongoClient
+﻿from pymongo import MongoClient
 
 
-MONGO_URI = "mongodb://localhost:27017"
-DB_NAME = "midterm_orders"
+from config.settings import MONGO_URI, MONGO_DATABASE
+DB_NAME = MONGO_DATABASE
 COLLECTION_NAME = "orders_validated"
 
 
@@ -225,3 +225,4 @@ if __name__ == "__main__":
     print("\nTesting sales_by_city:")
     for row in sales_by_city(5):
         print(row)
+

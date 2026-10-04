@@ -1,11 +1,11 @@
-import json
+﻿import json
 from datetime import datetime, timezone
 
 from pymongo import MongoClient, UpdateOne
 
 
-MONGO_URI = "mongodb://localhost:27017"
-DB_NAME = "midterm_orders"
+from config.settings import MONGO_URI, MONGO_DATABASE
+DB_NAME = MONGO_DATABASE
 
 ORDERS_COLLECTION = "orders_validated"
 DAILY_COLLECTION = "daily_sales_summary"
@@ -362,3 +362,4 @@ if __name__ == "__main__":
     print(result)
 
     show_materialized_views()
+

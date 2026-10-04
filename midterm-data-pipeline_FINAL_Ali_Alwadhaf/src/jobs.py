@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+﻿from datetime import datetime, timezone
 
 from pymongo import MongoClient
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -11,8 +11,8 @@ from src.aggregations import AGGREGATIONS
 # MongoDB
 # ============================================================
 
-MONGO_URI = "mongodb://localhost:27017"
-DB_NAME = "midterm_orders"
+from config.settings import MONGO_URI, MONGO_DATABASE
+DB_NAME = MONGO_DATABASE
 JOBS_COLLECTION = "job_runs"
 
 
@@ -296,3 +296,4 @@ if __name__ == "__main__":
 
     print("\nJob result:")
     print(result)
+
