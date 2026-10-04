@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing / cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Large input data
+data/orders_huge_mixed_quality.csv
+
+# API temporary uploads
+data/api_uploads/
+
+# Local generated files
+*.log
+
+# Environment / secrets
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
